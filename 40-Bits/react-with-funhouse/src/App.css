@@ -1,0 +1,405 @@
+/* UI CSS */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.side-bar-container {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 30px;
+  width: 100px;
+  height: calc(100vh - 70px);
+  background-color: rgb(228, 227, 227);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 40px;
+}
+
+.sidebar ul {
+  padding: 0; /* Remove padding from the ul */
+  margin: 0; /* Remove margin as well */
+}
+
+.sidebar li {
+  list-style: none;
+  margin: 30px 0 0 0;
+  color: #F4C21C;
+  font-size: 24px;
+}
+
+.sidebar img {
+  width: 70px;
+  height: 70px;
+}
+.flex-1.flex.items-center {
+  margin-left: 800px;
+}
+
+.flex-1.flex.items-center .relative {
+  width: 100%; /* Ensures the container takes full width */
+}
+.flex-1.flex.items-center > .absolute {
+  
+}
+.flex-1.flex.items-center > .relative > input {
+  font-family: "Poppins", sans-serif;
+  width: 250px; /* Full width of the container */
+  height: 20px; /* Height of the input field */
+  border-radius: 20px; /* Rounded corners for the input element */
+  padding: 20px; /* Padding inside the input field */
+  padding-left: 20px; /* Additional padding to make space for the icon */
+  border-radius: 40px
+}
+.sign-up-button {
+  width: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #F4C21C; 
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+}
+
+/*Log In CSS*/
+.SignIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.centered-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width of the parent container */
+}
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-logo {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.right-container {
+  flex: 1; /* Allow it to take remaining space */
+  max-width: 40%; /* Adjust max-width as needed */
+  height: 520px;
+  border: 2px solid #000000; /* Rendered edges */
+  background-color: #BABABA;
+  margin: 0 20px; /* Add some space between the image and the text */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; /* Align items to stretch fully */
+}
+
+.header {
+  justify-content: center;
+  margin: 20px 30px 10px 10px;
+}
+
+.header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 30px; /* Adjust margins */
+  float: left;
+}
+
+.header p {
+  float: left;
+  font-family: "Poppins", sans-serif;
+  margin: 0 50px; /* Adjust margins */
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  float: left;
+}
+
+.form-field-email label {
+  margin-right: 60px; /* Space between label and input */
+  width: 80px; /* Fixed width for label to align inputs */
+  font-family: "Poppins", sans-serif;
+}
+.form-field-pass label {
+  margin-right: 30px;
+  margin-left: 0px; /* Space between label and input */
+  width: 80px; /* Fixed width for label to align inputs */
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="email"], input[type="password"] {
+  width: 270px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 70px; /* Space above and below this section */
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 5px; /* Space between checkbox and label text */
+}
+
+.forgot-password {
+  color: #007BFF; /* Link color */
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.sign-in-button {
+  margin: 10px 30px; /* Add some space above the button */
+}
+
+.sign-in-button button {
+  width: 300px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #F4C21C; 
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #dab200; 
+}
+
+.alternative-login {
+  text-align: center;
+}
+.alternative-login p{
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.social-icons {
+  margin-top: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.social-icons .icon {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #181304; /* Change color as needed */
+}
+.signup-text{
+  margin-top: 20px;
+}
+.signup-text a{
+  text-decoration: none;
+}
+
+/* Register CSS */
+.SignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.sign-up-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width of the parent container */
+}
+.left-regis-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-regis-container{
+  flex: 1; /* Allow it to take remaining space */
+  max-width: 40%; /* Adjust max-width as needed */
+  height: 300px;
+  border: 2px solid #000000; /* Rendered edges */
+  background-color: #cfcfcf;
+  margin: 0 20px; /* Add some space between the image and the text */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; /* Align items to stretch fully */
+}
+.button-container {
+  margin: 10px 30px; /* Add some space above the button */
+}
+
+.role-button-customer {
+  width: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #757575; 
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+  margin-right: 20px;
+}
+.role-button-customer:hover{
+  background-color: #575757; 
+}
+
+.role-button-admin {
+  width: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #F4C21C; 
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+}
+.sign-in-link{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sign-in-link a{
+  text-decoration: none;
+}
+
+/*CUSTOMER CSS*/
+.right-regis-customer-container{
+  flex: 1; /* Allow it to take remaining space */
+  max-width: 40%; /* Adjust max-width as needed */
+  height: 500px;
+  border: 2px solid #000000; /* Rendered edges */
+  background-color: #cfcfcf;
+  margin: 0 20px; /* Add some space between the image and the text */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; /* Align items to stretch fully */
+}
+.form-group-customer{
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.form-group-customer {
+  margin-right: 60px; /* Space between label and input */
+  font-family: "Poppins", sans-serif;
+}
+input[type="text"]{
+  width: 270px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.button-group{
+  gap: 10px; /* Add this line to create space between the buttons */
+}
+.cancel-button,
+.create-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.cancel-button {
+  background-color: #616161;
+  color: white;
+}
+
+.create-button {
+  background-color: #F4C21C;
+  color: white;
+}
+
+/*ADMIN CSS*/
+.right-regis-customer-container{
+  flex: 1; /* Allow it to take remaining space */
+  max-width: 40%; /* Adjust max-width as needed */
+  height: 600px;
+  border: 2px solid #000000; /* Rendered edges */
+  background-color: #cfcfcf;
+  margin: 0 20px; /* Add some space between the image and the text */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; /* Align items to stretch fully */
+}
+.form-group-customer input[type="text"],
+.form-group-customer select {
+  flex: 2;
+  width: 270px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group-customer select {
+  -webkit-appearance: none;  /* Remove default arrow in Chrome */
+  -moz-appearance: none;     /* Remove default arrow in Firefox */
+  appearance: none;          /* Remove default arrow in other browsers */
+  background: url('data:image/svg+xml;utf8,<svg fill="%23ccc" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-color: #fff;
+  padding-right: 40px; /* Adjust padding to make room for arrow */
+}
