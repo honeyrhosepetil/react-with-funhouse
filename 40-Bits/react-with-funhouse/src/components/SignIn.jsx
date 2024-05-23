@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import gameLogo from './assets/img/game-header.png';
+import '../App.css';
+import gameLogo from '../assets/img/game-header.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebook, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faFacebook, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 
 function SignIn() {
   return (

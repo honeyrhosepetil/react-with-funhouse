@@ -1,6 +1,6 @@
+import "../App.css"
 import React from 'react';
-import './App.css';
-import gameLogo from './assets/img/game-header.png';
+import gameLogo from '../assets/img/game-header.png'
 
 function SignUpCustomer() {
   return (
