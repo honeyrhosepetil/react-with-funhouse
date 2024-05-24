@@ -1,4 +1,3 @@
-import React from 'react';
 import '../App.css';
 import gameLogo from '../assets/img/game-header.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,7 +42,7 @@ function SignIn() {
             <FontAwesomeIcon icon={faMicrosoft} className="icon" />
           </div>
           <p className="signup-text">
-            Need an account? <a href="">Sign Up</a>
+            Need an account? <a href="/signup">Sign Up</a>
           </p>
         </div>
       </div>

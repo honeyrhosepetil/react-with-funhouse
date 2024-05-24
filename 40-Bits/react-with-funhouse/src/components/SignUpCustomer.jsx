@@ -1,8 +1,14 @@
 import "../App.css"
 import React from 'react';
 import gameLogo from '../assets/img/game-header.png'
+import { useNavigate } from "react-router-dom";
 
 function SignUpCustomer() {
+  const navigate = useNavigate();
+  
+  const handleCancel = () => {
+    navigate("/signup");
+  };
   return (
     <div className="sign-up-container">
       <div className="left-regis-container">
@@ -26,10 +32,10 @@ function SignUpCustomer() {
           </div>
           <div className="form-group-customer">
             <label htmlFor="password">Password:</label>
-            <input type="text" id="password" name="password" />
+            <input type="password" id="password" name="password" />
           </div>
             <div className="button-group">
-              <button type="button" className="cancel-button">Cancel</button>
+              <button onClick={handleCancel} type="button" className="cancel-button">Cancel</button>
               <button type="submit" className="create-button">Create</button>
             </div>
         </form>

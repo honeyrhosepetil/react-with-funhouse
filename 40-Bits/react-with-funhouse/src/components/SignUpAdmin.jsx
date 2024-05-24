@@ -1,18 +1,18 @@
-import React from 'react';
-import './App.css';
+import "../App.css"
 import gameLogo from '../assets/img/game-header.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 function SignUpAdmin() {
+  const navigate = useNavigate();
+
   const handleCancel = () => {
-    // Add your cancel logic here (e.g., clearing the form or navigating away)
-    console.log('Cancel button clicked');
+    navigate("/signup");
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add your form submission logic here
     console.log('Form submitted');
   };
 
@@ -39,7 +39,7 @@ function SignUpAdmin() {
             </div>
             <div className="form-group-customer">
               <label htmlFor="admin-email">Email:</label>
-              <input type="text" id="email" name="email" />
+              <input type="email" id="email" name="email" />
             </div>
             <div className="form-group-customer">
               <label htmlFor="role">Role:</label>
@@ -55,7 +55,7 @@ function SignUpAdmin() {
             </div>
             <div className="form-group-customer">
               <label htmlFor="password">Password:</label>
-              <input type="text" id="password" name="password" />
+              <input type="password" id="password" name="password" />
             </div>
             <div className="button-group">
               <button type="button" className="cancel-button" onClick={handleCancel}>Cancel</button>
