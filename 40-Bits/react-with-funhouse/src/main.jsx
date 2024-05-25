@@ -30,4 +30,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </Routes>
     </Router>
   </React.StrictMode>
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb

@@ -30,7 +30,11 @@ function SignUp() {
           <button onClick={handleSignUpAdminClick} className="role-button-admin">Admin</button>
         </div>
         <div className="sign-in-link">
+<<<<<<< HEAD
           <p>Already have an account? <a href="/signin">Sign In</a></p>
+=======
+          <p>Already have an account? <a href="/signin">Sign in</a></p>
+>>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
         </div>
       </div>
     </div>

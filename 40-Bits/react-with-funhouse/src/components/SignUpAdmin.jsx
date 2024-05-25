@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import "../App.css";
 import gameLogo from '../assets/img/game-header.png';
@@ -7,6 +8,15 @@ import { useNavigate } from 'react-router-dom';
 
 function SignUpAdmin() {
   const [showPassword, setShowPassword] = useState(false);
+=======
+import "../App.css"
+import gameLogo from '../assets/img/game-header.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faFacebook, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
+
+function SignUpAdmin() {
+>>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
   const navigate = useNavigate();
 
   const handleCancel = () => {
@@ -41,6 +51,7 @@ function SignUpAdmin() {
               <label htmlFor="email"> Email: </label>
               <input type="email" id="email" name="email" placeholder="Enter your email" required />
             </div>
+<<<<<<< HEAD
 
             <div className="form-group-customer password-container">
               <label htmlFor="password">Password:</label>
@@ -49,6 +60,31 @@ function SignUpAdmin() {
                 <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
               </button>
             </div>
+=======
+            <div className="form-group-customer">
+              <label htmlFor="lastname">Last Name:</label>
+              <input type="text" id="lastname" name="lastname" />
+            </div>
+            <div className="form-group-customer">
+              <label htmlFor="admin-email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div className="form-group-customer">
+              <label htmlFor="role">Role:</label>
+              <select id="role" name="role">
+                <option value="webmaster">Webmaster</option>
+                <option value="manager">Manager</option>
+                <option value="employee">Employee</option>
+              </select>
+            </div>
+            <div className="form-group-customer">
+              <label htmlFor="username">Username:</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div className="form-group-customer">
+              <label htmlFor="password">Password:</label>
+              <input type="password" id="password" name="password" />
+>>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
             </div>
             <div className="button-group">
               <button type="button" className="cancel-button" onClick={handleCancel}>Cancel</button>
