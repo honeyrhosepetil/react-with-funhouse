@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import "../App.css";
 import gameLogo from '../assets/img/game-header.png';
@@ -8,27 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 function SignUpCustomer() {
   const [showPassword, setShowPassword] = useState(false);
-=======
-import "../App.css"
-import React from 'react';
-import gameLogo from '../assets/img/game-header.png'
-import { useNavigate } from "react-router-dom";
-
-function SignUpCustomer() {
->>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
   const navigate = useNavigate();
   
   const handleCancel = () => {
     navigate("/signup");
   };
-<<<<<<< HEAD
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-=======
->>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
   return (
     <div className="sign-up-container">
       <div className="left-regis-container">
@@ -42,7 +30,6 @@ function SignUpCustomer() {
         </div>
         <div className="customer-sign-up">
           <form>
-<<<<<<< HEAD
             <div className="form-group-customer">
               <label htmlFor="firstname">First Name:</label>
               <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
@@ -64,20 +51,6 @@ function SignUpCustomer() {
                 />
               </button>
             </div>
-=======
-          <div className="form-group-customer">
-            <label htmlFor="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" />
-          </div>
-          <div className="form-group-customer">
-            <label htmlFor="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" />
-          </div>
-          <div className="form-group-customer">
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" />
-          </div>
->>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
             <div className="button-group">
               <button onClick={handleCancel} type="button" className="cancel-button">Cancel</button>
               <button type="submit" className="create-button">Create</button>

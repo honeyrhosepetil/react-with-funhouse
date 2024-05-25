@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
@@ -6,12 +5,6 @@ import gameLogo from '../assets/img/game-header.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-=======
-import '../App.css';
-import gameLogo from '../assets/img/game-header.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebook, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
->>>>>>> 00467892e1b5da05fab758fc51e7072f32b364bb
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
