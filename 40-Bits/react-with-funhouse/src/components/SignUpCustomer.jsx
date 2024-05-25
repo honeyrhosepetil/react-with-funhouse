@@ -1,8 +1,22 @@
-import React from 'react';
-import './App.css';
-import gameLogo from './assets/img/game-header.png';
+import React, { useState } from 'react';
+import "../App.css";
+import gameLogo from '../assets/img/game-header.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
 
 function SignUpCustomer() {
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  
+  const handleCancel = () => {
+    navigate("/signup");
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className="sign-up-container">
       <div className="left-regis-container">
@@ -16,23 +30,32 @@ function SignUpCustomer() {
         </div>
         <div className="customer-sign-up">
           <form>
-          <div className="form-group-customer">
-            <label htmlFor="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" />
-          </div>
-          <div className="form-group-customer">
-            <label htmlFor="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" />
-          </div>
-          <div className="form-group-customer">
-            <label htmlFor="password">Password:</label>
-            <input type="text" id="password" name="password" />
-          </div>
+            <div className="form-group-customer">
+              <label htmlFor="firstname">First Name:</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
+            </div>
+            <div className="form-group-customer">
+              <label htmlFor="lastname">Last Name:</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required />
+            </div>
+            <div className="form-group-customer password-container">
+              <label htmlFor="password">Password:</label>
+              <input type={showPassword ? "text" : "password"} id="password-customer" name="password" placeholder="Enter your password" required />
+              <button 
+                type="button" 
+                onClick={togglePasswordVisibility} 
+                className="password-customer-toggle-button"
+              >
+                <FontAwesomeIcon 
+                  icon={showPassword ? faEyeSlash : faEye} 
+                />
+              </button>
+            </div>
             <div className="button-group">
-              <button type="button" className="cancel-button">Cancel</button>
+              <button onClick={handleCancel} type="button" className="cancel-button">Cancel</button>
               <button type="submit" className="create-button">Create</button>
             </div>
-        </form>
+          </form>
         </div>
       </div>
     </div>

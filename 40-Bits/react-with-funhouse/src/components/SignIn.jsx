@@ -1,10 +1,19 @@
-import React from 'react';
-import './App.css';
-import gameLogo from './assets/img/game-header.png';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../App.css';
+import gameLogo from '../assets/img/game-header.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function SignIn() {
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className="centered-box">
       <div className="left-container">
@@ -18,11 +27,14 @@ function SignIn() {
         <form>
           <div className="form-field-email">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" placeholder="example@gmail.com" required />
+            <input type="email" id="email" placeholder="Enter your email" required />
           </div>
           <div className="form-field-pass">
             <label htmlFor="password">Password:</label>
-            <input type="password" id="password" placeholder="password" required />
+            <input type={showPassword ? "text" : "password"} id="password-admin" name="password" placeholder="Enter your password" required />
+            <button type="button" onClick={togglePasswordVisibility} className="password-toggle-button">
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+            </button>
           </div>
           <div className="remember-forgot">
             <label>
@@ -43,7 +55,7 @@ function SignIn() {
             <FontAwesomeIcon icon={faMicrosoft} className="icon" />
           </div>
           <p className="signup-text">
-            Need an account? <a href="">Sign Up</a>
+            Need an account? <a href="/signup">Sign Up</a>
           </p>
         </div>
       </div>
@@ -52,4 +64,6 @@ function SignIn() {
 }
 
 export default SignIn;
+
+
 
