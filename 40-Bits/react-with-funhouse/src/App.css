@@ -65,6 +65,7 @@
   padding-left: 20px; /* Additional padding to make space for the icon */
   border-radius: 40px  
 }
+
 .styled-input {
   width: 100%; /* Full width of the parent container */
   padding: 8px;
@@ -72,6 +73,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 .search-icon {
   position: absolute;
   left: 81%; /* Adjust as needed */
@@ -79,9 +81,11 @@
   transform: translateY(-50%);
   color: #7e7e7e; /* Gray color */
 }
+
 .search-icon:hover {
   color: #000000;
 }
+
 .sign-up-button {
   width: 100px;
   font-family: "Poppins", sans-serif;
@@ -93,16 +97,439 @@
   border-radius: 30px;
   outline: none;
 }
+
+.icon-button:hover {
+  background-color: transparent;
+  color:#dab200; 
+  transform: scale(1.2); 
+}
+
 .home-img {
   margin-top: 20px;
   margin-left: 100px;
   width: 90%; 
   border-radius: 40px;
   transition: none;
+}
+.item-label h1{
+  font-family: "Poppins", sans-serif;
+  color: #181304c2;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.nav-menu {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #181304c2;
+  font-size: 17px;
+}
+
+.genre-dropdown .genre-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:#181304;
   
 }
 
+.genre-link .sort-icon {
+  margin-left: 8px;
+}
 
+.genre-link .sort-icon{
+  color: #181304c2;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: gray;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #F4C21C;
+  margin: auto;
+  display: block;
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover {
+  color: black;
+  transform: scale(1.2); 
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/*ADMIN UI */
+.create-delete buttons{
+  color: #000000;
+}
+.create-delete {
+  display: flex;
+  justify-content: right; /* Center the buttons horizontally */
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.create-delete button {
+  width: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: #F4C21C; 
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+  outline: none;
+  border: none; 
+}
+
+.create-delete button:hover {
+  background-color: transparent;
+  color: #dab200;
+}
+
+.create-delete button:focus {
+  outline: none;
+}
+
+.create-delete button:focus {
+  outline: none;
+}
+
+/*ADMIN UI HOME*/
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Optional padding */
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  background: rgb(228, 227, 227);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  border-radius: 40px;
+  overflow: hidden; /* Ensures child elements do not overflow the border radius */
+}
+
+.card:hover {
+  transform: translateY(-20px); /* Move up on hover for a lifting effect */
+  background: linear-gradient(to bottom, rgba(250, 250, 250, 0.5), rgb(244, 194, 28));
+}
+
+.card:before {
+  content: ""; /* Fixing typo: use 'content' instead of 'container' */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 1;
+}
+
+.card:hover:before {
+  opacity: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+  
+}
+
+.card .info h1 {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.card .info p {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button-update {
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.info .button-update:hover {
+  background-color: #ddd;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 600px;
+  max-height: 80vh; /* Limit the height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling */
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.image-upload {
+  text-align: center;
+}
+
+.upload-placeholder {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.add-text-fields label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.file-input {
+  display: none;
+}
+ 
+.add-text-fields input[type="number"]{
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.add-text-fields input[type="text"]{
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.add-text-fields {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-fields label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-check-out {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+
+/*CUSTOMER UI HOME*/
+.card-container-customer {
+  display: grid;
+  row-gap: 3.5rem;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.card-customer {
+  position: relative;
+  width: 288px;
+}
+
+.card-customer img {
+  width: 100%;
+  height: 355px;
+  border-radius: 1.5rem;
+  background-color: rgb(138, 92, 92);
+}
+
+.check-out-button {
+  width: 280px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 24%, 39%, 0.15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s 0.1s;
+}
+
+.card-customer:hover .check-out-button {
+  opacity: 1;
+}
+
+.check-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.check-out h1, .check-out p {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem; /* Space below each element */
+}
+
+.check-out h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.check-out p {
+  font-size: 15px;
+}
+
+.button-check-out {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center text within the button */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #f4c21c;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.button-check-out svg {
+  margin-right: 8px;
+}
+
+.button-check-out:hover {
+  background-color: #d4a200;
+  color: white;
+}
 
 /*Log In CSS*/
 .SignIn {
@@ -526,3 +953,5 @@ button:hover {
 .password-admin-toggle-button:hover{
   background-color: transparent;
 }
+
+/*PROFILE ADMIN*/
