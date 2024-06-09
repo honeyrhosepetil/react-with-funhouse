@@ -145,9 +145,9 @@ function AdminHome() {
             <div className="info">
                 <h1>Title: </h1>
                 <p>Genre: </p>
+                <p>Date Released: </p>
                 <p>Current Stock: </p>
                 <p>Reorder point: </p>
-                <p>Location: </p>
                 <p>Receiving: </p>
                 <p>Sales: </p>
                 <p>Low Stock Alert: </p>
@@ -184,16 +184,16 @@ function AdminHome() {
                   <input type="text" className="modal-input" />
                 </div>
                 <div className="field-container">
+                  <label>Date Released:</label>
+                  <input type="text" className="modal-input" />
+                </div>
+                <div className="field-container">
                   <label>Current Stock:</label>
                   <input type="number" className="modal-input" />
                 </div>
                 <div className="field-container">
                   <label>Reorder Point:</label>
                   <input type="number" className="modal-input" />
-                </div>
-                <div className="field-container">
-                  <label>Location:</label>
-                  <input type="text" className="modal-input" />
                 </div>
                 <div className="field-container">
                   <label>Receiving:</label>
@@ -236,6 +236,10 @@ function AdminHome() {
                   <input type="text" className="modal-input" />
                 </div>
                 <div className="field-container">
+                  <label>Date Released: </label>
+                  <input type="text" className="modal-input" />
+                </div>
+                <div className="field-container">
                   <label>Current Stock:</label>
                   <input type="number" className="modal-input" />
                 </div>
@@ -244,11 +248,7 @@ function AdminHome() {
                   <input type="number" className="modal-input" />
                 </div>
                 <div className="field-container">
-                  <label>Location:</label>
-                  <input type="text" className="modal-input" />
-                </div>
-                <div className="field-container">
-                  <label>Receiving:</label>
+                  <label>Price</label>
                   <input type="text" className="modal-input" />
                 </div>
                 <div className="field-container">

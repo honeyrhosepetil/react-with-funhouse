@@ -865,7 +865,7 @@ button:hover {
 .password-customer-toggle-button{
   position: absolute;
   right: 20%;
-  top: 58%;
+  top: 56%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -942,7 +942,7 @@ button:hover {
 .password-admin-toggle-button {
   position: absolute;
   right: 20%;
-  top: 52%;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -955,3 +955,188 @@ button:hover {
 }
 
 /*PROFILE ADMIN*/
+
+.profile {
+  display: flex;
+}
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Center the content horizontally */
+  text-align: left;
+  margin-left: 150px;
+}
+
+.edit-profile-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 30px;
+  align-items: left;
+}
+
+.edit-profile-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  margin-top: 10px; /* Adjust as needed */
+
+}
+
+.profile-picture-container {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+  margin-left: 150px; 
+  margin-top: 50px;
+
+}
+
+.pen-icon {
+  position: absolute;
+  top: 45%; /* Adjust as needed */
+  left: 45%;
+  font-size: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.profile-label {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+
+.profile-info input[type="text"],
+.profile-info input[type="password"] {
+  flex: 2;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  
+}
+.profile-info .eye-toggle {
+  position: absolute;
+  top: 57%;
+  right: 21%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.profile-info .eye-toggle svg {
+  color: #aaa; /* Default color */
+}
+
+.profile-info .eye-toggle svg:hover {
+  color: #333; /* Hover color */
+}
+
+
+.button-wrapper {
+  margin-top: 30px;
+  margin-left: 200px;
+}
+
+.update-account, .delete-account {
+  padding: 10px 10px; /* Add padding for better visual appearance */
+  margin-right: 20px; /* Add some space between buttons */
+}
+
+.update-account {
+  width: 300px;
+  border-radius: 40px;
+  font-family: "Poppins", sans-serif;
+  background-color: #F4C21C;
+  color: #f0f0f0;
+  padding: 20px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.delete-account-container {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #ccc; /* Grey background color */
+  padding: 30px; /* Add padding for spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  text-align: left; /* Center-align the text */
+  justify-content: center;
+  border-radius: 40px;
+
+}
+
+.delete-account-container h1{
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.delete-account-container p {
+  margin-bottom: 10px; /* Add space below the paragraph */
+}
+
+.delete-account {
+  width: auto;
+  border-radius: 40px;
+  font-family: "Poppins", sans-serif;
+  background-color:rgb(165, 40, 40);
+  color: #f0f0f0;
+  padding: 20px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+

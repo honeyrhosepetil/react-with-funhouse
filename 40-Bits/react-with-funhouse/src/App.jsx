@@ -11,8 +11,59 @@ import HeaderHomeSecond from './assets/img/header-home-second.png';
 import HeaderHomeThird from './assets/img/header-home-third.png';
 import HeaderHomeFourth from './assets/img/header-home-fourth.png';
 
-function CustomerHome() {
+function Modal({ isOpen, onClose }) {
+  const [showPaymentOptions, setShowPaymentOptions] = useState(false);
+  const [selectedPayment, setSelectedPayment] = useState("");
+
+  if (!isOpen) return null;
+
+  const handleContinue = () => {
+    setShowPaymentOptions(true);
+  };
+
+  const handlePaymentSelect = (e) => {
+    setSelectedPayment(e.target.value);
+  };
+
+  const handlePaymentConfirm = () => {
+    // Here you can add further actions such as submitting the selected payment method
+    console.log("Selected Payment Method:", selectedPayment);
+    // For example, you could close the modal after the payment method is selected
+    onClose();
+  };
+
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={onClose}>&times;</span>
+        {showPaymentOptions ? (
+          <div>
+            <h2>Select Mode of Payment</h2>
+            <select value={selectedPayment} onChange={handlePaymentSelect}>
+              <option value="">Select Payment Method</option>
+              <option value="Gcash">Gcash</option>
+              <option value="Paypal">Paypal</option>
+              <option value="Bank">Bank</option>
+            </select>
+            <button onClick={handlePaymentConfirm}>Confirm</button>
+          </div>
+        ) : (
+          <div>
+            <h2>Do you want to check out this item?</h2>
+            <div>
+              <button onClick={onClose}>Cancel</button>
+              <button onClick={handleContinue}>Continue</button>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function App() {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSignUpClick = () => {
     navigate("/signup");
@@ -42,6 +93,10 @@ function CustomerHome() {
 
   const handleGenreMouseLeave = () => {
     setIsGenreDropdownOpen(false);
+  };
+
+  const handleCheckoutClick = () => {
+    setIsModalOpen(true);
   };
 
   return (
@@ -127,30 +182,18 @@ function CustomerHome() {
               <div className="check-out">
                 <h1>Title: </h1>
                 <p>Genre: </p>
-                <a href="#" className='button-check-out'>
-                <FontAwesomeIcon icon={faShoppingCart}/> Check Out</a>
+                <p>Price:</p>
+                <a href="#" className='button-check-out' onClick={handleCheckoutClick}>
+                  <FontAwesomeIcon icon={faShoppingCart}/> Check Out
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
 
-export default CustomerHome;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default App;
